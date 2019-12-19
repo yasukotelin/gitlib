@@ -31,7 +31,7 @@ type DiffFile struct {
 // If isStaged is true, you can get diff files from staging.
 // and if false, get diff files from unstaging.
 func GetDiffFiles(isStaged bool) ([]DiffFile, error) {
-	nameOnly, err := GetDiffNameStatus(isStaged)
+	nameOnly, err := GetDiffNameOnly(isStaged)
 	if err != nil {
 		return nil, err
 	}
